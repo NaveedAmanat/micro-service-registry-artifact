@@ -8,7 +8,7 @@ pipeline{
                         sh "git config user.email mnaveed0004@gmail.com"
                         sh "git config user.name NaveedAmanat"
                         sh "sed -i 's+naveed0004/service-registry.*+naveed0004/service-registry:${IMAGE_TAG}+g' devolpment/deployment.yml"
-                        sh "cat devlopment/deployment.yaml"
+                        sh "cat devlopment/deployment.yml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job update artifact:v${IMAGE_TAG}'"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/micro-service-registry-artifact.git HEAD:main"
