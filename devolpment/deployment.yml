@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
         - name: eureka
-          image: naveed0004/service-registry:1
+          image: naveed0004/service-registry:2
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8761
